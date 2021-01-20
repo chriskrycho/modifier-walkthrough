@@ -1,0 +1,7 @@
+<div>
+  <p>current value: {{display @value}}</p>
+  <label>
+    {{@label}}
+    <input value={{@value}} {{on "input" (pick "target.value" @updateValue)}}>
+  </label>
+</div>

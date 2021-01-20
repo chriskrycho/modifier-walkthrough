@@ -1,5 +1,9 @@
-{{page-title "ModifierWalkthrough"}}
+{{page-title "Modifier Walkthrough"}}
 
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">Some inputs! with focusing!</h2>
 
-{{outlet}}
+<MyInput
+  @label="First input"
+  @value={{this.value}}
+  @updateValue={{this.updateValue}}
+/>
