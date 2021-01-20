@@ -2,8 +2,13 @@
 
 <h2 id="title">Some inputs! with focusing!</h2>
 
-<MyInput
-  @label="First input"
-  @value={{this.value}}
-  @updateValue={{this.updateValue}}
-/>
+<button {{on "click" this.addInput}}>add {{if this.values.length 'another'}} one!</button>
+
+{{#each this.values key="@index" as |value index|}}
+  <MyInput
+    @label="Input {{index}}"
+    @value={{value}}
+    @updateValue={{fn this.updateValue index}}
+    @delete={{fn this.delete index}}
+  />
+{{/each}}

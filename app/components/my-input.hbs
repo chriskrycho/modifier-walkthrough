@@ -4,4 +4,6 @@
     {{@label}}
     <input value={{@value}} {{on "input" (pick "target.value" @updateValue)}}>
   </label>
+
+  <button {{on "click" @delete}}>delete this one!</button>
 </div>
