@@ -2,8 +2,11 @@
   <p>current value: {{display @value}}</p>
   <label>
     {{@label}}
-    <input value={{@value}} {{on "input" (pick "target.value" @updateValue)}}>
+    <input
+      value={{@value}}
+      {{on "input" (pick "target.value" @updateValue)}}
+    >
   </label>
 
-  <button {{on "click" @delete}}>delete this one!</button>
+  <button {{focus when=@shouldReceiveFocus}} {{on "click" @delete}}>delete this one!</button>
 </div>
